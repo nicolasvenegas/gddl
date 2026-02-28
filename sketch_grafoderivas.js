@@ -83,42 +83,50 @@ function draw() {
 
 
 function grafo() {
-	let i = 10;
-	let index = 0;
-	rectMode(CENTER);
-	translate(0,0);
-  	rotateX(width);
+    let i = 0.1;
+    let index = 0;
+    rectMode(CENTER);
+    
+    translate(0, 0); 
+    
+    rotateX(width);
     rotateY(height);
 
-    // Sustituimos el crecimiento infinito por ruido de Perlin acotado al lienzo
+    // Ajustamos wave1 para que su rango sea la altura total (de arriba a abajo)
     let wave0 = map(noise(frameCount * 0.01), 0, 1, 0, width/2);
-    let wave1 = map(noise(frameCount * 0.01 + 500), 0, 1, 0, height/2);
+    let wave1 = map(noise(frameCount * 0.01), 0, 1, -height/2, height/2); 
+    
+    let sizeMult = map(noise(frameCount * 0.01 + i), 0, 1, 1, 4);
 
     for (let i = 0; i < COUNT; i++) {
-	    for (let i = 0; i < COUNT; i++) {
-	        push();
-	        let tColor = map(pmouseX, width, 0, 0, 100);
-	        let lColor = map(pmouseY, height, 0, 0, 100);
-			fill(0, 0);
-			strokeWeight(1);
-			stroke(255,10);
+        for (let j = 0; j < COUNT; j++) { 
+            push();
+            translate(0, 0); 
+            let tColor = map(pmouseX, width, 0, 0, 100);
+            let lColor = map(pmouseY, height, 0, 0, 100);
+            fill(0, 0);
+            strokeWeight(1);
+            stroke(255, 10);
 
-            // Sustituimos divisiones y sumas de frameCount por ruido constante
-	        rotateX(pt[index++] + wave0 / 100); 
-	        rotateY(pt[index++] + wave1 / 100);
+            rotateX(pt[index++] + wave0 / 100); 
+            rotateY(pt[index++] + wave1 / 100);
 
-            // Sustituimos el multiplicador (frameCount * 0.01) por un valor de ruido suave
             let noiseStep = noise(frameCount * 0.001) * 0.1; 
-	        rect( pt[index++] * noiseStep + wave0, pt[index++] * (-noiseStep) + wave1, pt[index++], pt[index++]); 
             
-	        pt[index - 5] += pt[index];
-	        pt[index - 4] += pt[index++];
-	        pop();
-			scale(0.5);
-	    }
-	}
+            // Sumamos wave1 a la coordenada Y para generar el movimiento vertical
+            rect( 
+                pt[index++] * noiseStep, 
+                pt[index++] * (-noiseStep) + wave1, 
+                pt[index++] * sizeMult, 
+                pt[index++] * sizeMult  
+            );            
+            
+            pt[index - 5] += pt[index];
+            pt[index - 4] += pt[index++];
+            pop();
+        }
+    }
 }
-
 
 
 
@@ -134,15 +142,6 @@ function stopit(){
 }
 
 
-function mousePressed(){ //bei click Pause, bei 2. click weiter
-  if(pause==false){
-    noLoop();
-    pause=true;
-  }else{
-    loop();
-    pause = false;
-  }
-}
 
 /*
 function mouseClicked(){
