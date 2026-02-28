@@ -101,7 +101,7 @@ function grafo() {
 	        let lColor = map(pmouseY, height, 0, 0, 100);
 			fill(0, 0);
 			strokeWeight(1);
-			stroke(255,7);
+			stroke(255,10);
 
             // Sustituimos divisiones y sumas de frameCount por ruido constante
 	        rotateX(pt[index++] + wave0 / 100); 

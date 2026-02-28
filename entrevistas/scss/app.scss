@@ -214,6 +214,7 @@ footer{
 }
 #image-prefooter{
   margin: 6rem 0 0;
+  min-width: 100vw;
 }
 #logo-fondart{
   margin: 4rem  0 1rem 0;
@@ -701,12 +702,11 @@ line-height: 1.4;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: url("../img/maritza_1.png") center center no-repeat;
   margin-bottom: 6rem;
 
 }
 body.maritza .hero-full-screen{
-  background: url("../img/maritza_1.png") center center no-repeat;
+  background: url("../img/maritza_1.jpg") center center no-repeat;
   background-size:cover;
 }
 body.francke .hero-full-screen{
@@ -849,7 +849,8 @@ background: #141414;
   margin: 3rem 0;
 }
 body.volpi .size-2-bg-container{
-  background:url('../img/volpiperfo_8.gif') center right;background-size:cover;
+  background:url('../img/volpiperfo_8.gif') center right;
+  background-size:cover;
 }
 
 #cuadrokaren{
