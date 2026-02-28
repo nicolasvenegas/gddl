@@ -92,31 +92,33 @@ function grafo() {
     rotateX(width);
     rotateY(height);
 
-    // Ajustamos wave1 para que su rango sea la altura total (de arriba a abajo)
-    let wave0 = map(noise(frameCount * 0.01), 0, 1, 0, width/2);
-    let wave1 = map(noise(frameCount * 0.01), 0, 1, -height/2, height/2); 
+    // 1. Creamos un factor que va de 0 a 1 en los primeros 150 frames (suavizado)
+    let startCenter = constrain(map(frameCount, 0, 150, 0, 1), 0, 1);
+
+    // 2. Multiplicamos el mapeo por startCenter para que inicie en 0 (el centro exacto)
+    let wave0 = map(noise(frameCount * 0.01), 0, 1, -width / 2, width / 2) * startCenter;
+    let wave1 = map(noise(frameCount * 0.01 + 500), 0, 1, -height / 2, height / 2) * startCenter; 
     
-    let sizeMult = map(noise(frameCount * 0.01 + i), 0, 1, 1, 4);
+    // El tamaño también inicia en 1 gracias al lerp
+    let sizeNoise = map(noise(frameCount * 0.01 + i), 0, 1, 0.5, 2.5);
+    let sizeMult = lerp(1, sizeNoise, startCenter);
 
     for (let i = 0; i < COUNT; i++) {
         for (let j = 0; j < COUNT; j++) { 
             push();
-            translate(0, 0); 
-            let tColor = map(pmouseX, width, 0, 0, 100);
-            let lColor = map(pmouseY, height, 0, 0, 100);
             fill(0, 0);
             strokeWeight(1);
             stroke(255, 10);
 
-            rotateX(pt[index++] + wave0 / 100); 
-            rotateY(pt[index++] + wave1 / 100);
+            rotateX(pt[index++] + wave0 / 360); 
+            rotateY(pt[index++] + wave1 / 360);
 
-            let noiseStep = noise(frameCount * 0.001) * 0.1; 
+            index += 2; 
             
-            // Sumamos wave1 a la coordenada Y para generar el movimiento vertical
+            // Al ser wave0 y wave1 = 0 al inicio, el rect aparece en el centro
             rect( 
-                pt[index++] * noiseStep, 
-                pt[index++] * (-noiseStep) + wave1, 
+                wave0, 
+                wave1, 
                 pt[index++] * sizeMult, 
                 pt[index++] * sizeMult  
             );            
