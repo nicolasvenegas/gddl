@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patricio Alvarado — Deriva del Libro</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href=" https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css " rel="stylesheet">
+    <script src="https://unpkg.com/hydra-synth"></script>
+  </head>
+  <body  class="pato">
+
+
+
+<div class="border"></div>
+
+  <a class="btn-inicio" href="../index.html#open-modal">g*ddl</a>
+
+<!-- <a href="http://localhost:3000/menu.html" class="bottomright-button"><span>← volver</span></a> -->
+
+
+<div id="creditos">Hecho en Temuko, Wallmapu — Proyecto financiado por MINCAP @&nbsp;2021 	¶</div>
+
+
+<canvas style="width: 100%; height: 100vh; margin-bottom:6rem;mix-blend-mode: darken;" id="myCanvas" width="400px" height="400px"></canvas>
+<script>
+      // create a new hydra-synth instance
+      var hydra = new Hydra({
+        canvas: document.getElementById("myCanvas"),
+        detectAudio: false,
+        enableStreamCapture: false,
+      })
+      noise(2)
+      .invert(1)
+      .luma(() => mouse.y / window.innerWidth*0.1,0.1)
+      .color(-1,0,1)
+      .hue(() => mouse.x / window.innerWidth)
+      .colorama(0.0015)
+      .modulate(noise(2).modulate(noise(4)),0.06)
+      .modulate(noise(2),0.1)
+      .saturate(1.75)
+      .blend(src(o0),0.99)
+      .scale(1.002)
+      .modulateHue(src(o0).color(-1,1).hue(0.9).saturate(2),3)
+      .out(o0)
+    </script>
+
+
+  <div class="grid-x">
+    <div class="small-10 small-offset-1 cell">
+      <div class="articulo-titulo">
+        <h1 data-fit-text>La jaula <br/>y el algoritmo</h1>
+
+        <h2 class="text-center">Una conversación con Patricio Alvarado<sup><a href="https://www.instagram.com/patricioalvaradobarria/" target="_blank">@patricioalvaradobarria</a>  </sup></h2>
+        <p class="subheader text-center nombre-deriva">Poeta & Académico</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="grid-x">
+      <div class="small-10 small-offset-1 cell text-center">
+        <p>Para mi literatura no es lo mismo que libro, y viceversa. La literatura existe sin libro, siempre ha existido sin libro. La literatura es oral, inicialmente. El libro es un fenómeno tecnológico, es tecnología, y esa tecnología es algo que se asienta muy tarde en la historia. De hecho, la misma palabra literatura viene de la piedra, del lithos, y en ese sentido los primeros libros serían los códigos, formas de comunicación que intentaban quedar en la piedra. Para mi el libro está después de la literatura, la literatura tiene múltiples formas de aparecer.</p>
+        <p class="pregunta">¿Como que la literatura no necesita tener alguien que la lea y el libro sí?</p>
+        <p>Soy muy militante de la tesis de Damian Tabarovsky, en Literatura de izquierda hay un ensayo que se llama Escribir sin público. Para mí eso es fundamental, yo creo en la autonomía de la literatura, y creo que eso permite que, a diferencia de las artes visuales, en la literatura uno puede escribir algo, morirse sin que nadie nunca antes lo lea, incluso no tener la búsqueda ni la necesidad de que algo sea leído, y ese texto cien años después puede tener un rendimiento importante ¿cachai? Entonces para mí el libro es una tecnología que se asocia a la literatura, pero que no necesariamente depende de eso. Por ejemplo, la literatura mapuche es algo muy antiguo, más antiguo que el español, y yo creo que precisamente ha durado tanto tiempo por la íntima necesidad de que el sujeto exista como tal, y por otra parte, la función de la comunicación dentro de la cultura. Imagínate de un momento histórico donde no se valida la mentira, porque no puedes usar la mentira porque altera un sistema de comunicación sumamente específico. Por otra parte, el libro no es sólo literario, y eso no los hace ni mejor ni peor. Es justo que hayan libros de todo tipo. Más que justo, necesario.</p>
+        <p class="pregunta">¿Qué piensas respecto a la idea de autor?</p>
+        <p>La originalidad, así como el autor, me parece que son demandas super capitalistas. La originalidad es un concepto súper capitalista que lo único que hace es ofrecerte una nueva forma de consumir, o al menos eso es lo que yo entiendo. La idea de originalidad está muy cerca de la idea del genio, y la idea del genio a la idea del autor ¿Por qué lees a un autor? no lo lees porque creas que te va a aburrir, o creas que es malo ¿cachai? todos queremos leer autores buenos.</p>
+        <p>Hay una entrevista que le hacen a Carlos Ossa sobre capitalismo cognitivo, de cómo el sistema se ha apropiado de los procesos. Hoy día ya no importa la obra sino el proceso, la idea de proyección, que es algo que está muy presente en la idea que entendemos de obra. Como que hoy día importa más el relato que hay detrás de la obra, que la obra misma.</p>
+        <p>Hay como una disolución del autor. Como que me pregunto quién es el autor también. Hay un montón de contenido circulando hoy y que no tiene autor. Y ahí emerge la pregunta de hacia dónde derivamos con esta figura que se ha disuelto.</p>
+        <p class="pregunta">Y tú mantienes la práctica de firmar tus libros, ponerles tu nombre?</p>
+        <p>Sí. Para mí tiene que ver con la idea de hacerte cargo. Me ha tocado trabajar con editoriales, colaboro con una editorial en Barcelona donde publico poesía, y ahí la idea cambia completamente, porque una editorial lo que busca es armar catálogo, y al armar catálogo hay un posicionamiento político. Y al posicionarte políticamente no es lo mismo publicar a un autor que a otro.</p>
+        <p class="pregunta">Pensaba en el libro de la constitución, arrumbado por miles en cajas en las casas de operadores políticos, sedes de partidos... ese libro en su existencia futura ¿cómo lo ves, será ocupado? ¿será reivindicado?</p>
+        <p>Yo creo que hay varias derivas ahí. He visto a amigos escritores que han hecho esto de tomar el texto y han empezado a rayar, haciendo poemas como rayando el libro, o sacando palabras, haciendo versos. Es como un ejercicio, porque inventar una palabra nueva es casi imposible. Igual es todo un tema esto de la constitución como best seller, pero yo no sé si eso es porque Chile es Chile, está la estadística de que el libro de la constitución vigente de Pinochet ha sido muy comprado en kioscos, de siempre, pero eso es porque en Chile hay una forma muy corporativa de robar. A diferencia de otros países, acá se hace todo bajo el marco legal, pero estás robando igual. Entonces para poder robar elegantemente, de cuello y corbata, tienes que mantener las apariencias, diciendo que estás haciendo un negocio, que es algo muy español, muy francés, super Europa. Noruega es uno de los países donde más se roba, Canadá, y tienen hecha mierda Latinoamérica, Noruega tiene destruído el sur de Chile. Pero claro, todo bajo el marco legal, bajo la jurisprudencia, todo muy leído. Entonces si tu les dices ladrones, se espantan, porque todo está bajo la ley, y eso pasa un poco en Chile.</p>
+        <p>Quizás el límite fue la votación. El libro tuvo mucho éxito e hizo mucho sentido antes de la votación. Después del plebiscito el libro se transformó en papel no más.</p>
+        <p class="pregunta">¿Cómo ves la relación entre los libros y la educación?</p>
+        <p>Igual yo tengo una visión media alterada respecto a esto. Yo siempre leí, porque me dedico a esto desde que tengo memoria, y para mí siempre los libros han tenido como un rol fundamental. No solo mis compañeros, u otros estudiantes, profesores, no leían. La lectura no era algo que les interesara. </p>
+        <p>Después cuando estudié historia del arte, me formé como todos en latinoamérica, a través de fotocopias, los libros eran muy caros. En Juan Gomez Milla en Santiago, al lado de la facultad estaba la librería más exitosa, que era una fotocopiadora, donde todos íbamos a fotocopiar los textos, y donde además podías comprar las fotocopias anilladas que otras personas iban a dejar. Había como un micromercado del pirateo super bueno, porque usabas el texto hasta quemarlo, y al final la fotocopia casi no se veía.</p>
+        <p>En mi experiencia los libros sí son fundamentales. Porque yo estudié teoría, que igual es algo que necesariamente pasa por los libros. Sí, evidentemente tú también puedes hacer teoría desde la pintura, desde la performance, obvio que sí, pero igual la lectura es algo importante. Después me fuí a estudiar a Barcelona literatura, y ahí la unidad básica de todo era el libro. Igual los libros eran más baratos y había un sistema de libros de segunda mano que funcionaba super bien, hay un mercado que funciona. El mercado de la lectura en España es gigantesco, no hay ningún tipo de comparación con lo que sucede acá.</p>
+        <p class="pregunta">¿Y cómo ves esa diferencia entre el trabajo editorial en Barcelona y Temuko?</p>
+        <p>En lo esencial, muy parecido. Me ha tocado trabajar con varias editoriales, y evidentemente en las grandes editoriales hay censura. Claramente son fábricas de salchichas, donde todavía se piensa esta idea de los tres actos, y un montón de cosas que se puedan consumir. La diferencia radical creo que tiene que ver con una cuestión de mercado. Hay un mercado en España, en Europa. Por ejemplo Sant Jordi, pero claro, en Sant Jordi hay tanta lectura que aunque tu editorial sea pequeña igual vas a tener mayor salida, mayores posibilidades de imprimir más barato porque como se imprime más hay más papel, un montón de situaciones que acá no se dan.</p>
+        <p>———</p>
+        <p>…pienso como en la música. En los años setenta todo el mundo soñaba con tener un estudio, grabar y todo eso. Hoy día lo puedes hacer desde casa, hoy día vivimos el sueño que hubiese pensado alguien de los setenta. La pregunta sería ¿se hace música mejor que en los setenta? Si hoy día es más fácil hacer música, ya no necesitas un Moog, sintes análogos…</p>
+        <p class="pregunta">siguiendo tu analogía, ¿es posible hacer música de los setenta hoy, cuando la estructura de composición que ocupan lxs cabrxs ya no se basa en una escala sino en pads de colores, posicionados de manera arbitraria y contingente?</p>
+        <p>Llevado a la literatura, ahí yo veo que hoy día es mucho más fácil igual. No necesitas unos tipos móviles, o una tinta que es cara, con tipos que tienes que estar ojo por ojo moviéndolas y todo eso. Hoy día armas en Word, imprimirlo y ya está.</p>
+        <p class="pregunta">Igual esto pienso en esta lucha de ingenieros detrás de esos softwares que se usan para hacer libros para reducir el error, la incertidumbre, el ruido, distintos nombres que le hemos puesto a vernos como no queremos vernos. La tecnología como que va higienizando el proceso de creación…</p>
+        <p>Siento que lo uniforma. Pero ahí es donde están las posibilidades. Antes tenías la posibilidad de utilizar ¿cuántas baterías de tipos móviles? pocas, caras, tamaños, y además físicamente: llevarlo, acumularlo, cuidarlo, resguardarlo, era super complejo. Pero hoy día en un software puedes jugar con eso y tener una batería mucho más amplia. Yo creo que en ese sentido es más fácil hoy día producir libros, imprimir libros, es mucho más fácil que en los ochentas, todavía se usaba mimeógrafo. Soy bien poco romántico en cómo veo la tecnología, siento que hay que aprovecharla.</p>
+        <p class="pregunta">Creo que te obliga a tener ciertos resguardos críticos mayores. Tiene un impacto directo igual en la manera en que vivenciamos el tiempo. Sí es bkn hacer en media hora algo que en otro régimen tecnológico te llevaba una semana, a mi igual me gusta, yo también lo hago. Pero al mismo tiempo siento que eso tiene implicancias, quizás me da distinto tiempo para pensar, para revisar, me hace pensar menos con otras personas, como un montón de afecciones en mi relación con el tiempo, con el objeto que estoy haciendo, con lxs otrxs…</p>
+        <p>Si, quizás por la saturación. Creo que lo decía Alan Moore, esto de que desde cierta época toda la información se está duplicando muy rápidamente. Y yo creo que esto nos plantea más desafíos. Por ejemplo, antes una tesis doctoral podía tener que ver con cuántas veces T. S. Elliot en La tierra baldía ocupaba una palabra tal, o la vocal tanto. O yendo a libros, hay un famoso cuento de Georges Perec donde evita usar la letra e. Eso hoy con Ctrl+F lo solucionas en dos minutos ¿cachai? Ahora, eso te exige otros desafíos, mucho más altos, entonces si ya hoy día podemos solucionar ese aspecto técnico que antes era un desafío, nuestro horizonte debería estar mucho más lejos. Entonces el problema está en que todavía pensamos en términos del siglo XIX, en el sentido de lo que queremos lograr, y la tecnología y lo contemporáneo han pasado por sobre nosotros y nosotros no nos hemos actualizado a lo que esa tecnología nos permite, y ahí es dónde yo veo el problema.</p>
+        <p class="pregunta">Pensaba en esto de que si hacemos las cosas tan rápido ¿no estaremos instaurándonos como medida un tiempo medio funcionalizante? ¿ves algo en la lentitud? siento que quizás esta sea un rasgo habilitante para la ocurrencia de otras cosas...</p>
+        <p>Yo creo que tienes razón en eso. Lo pienso también en relación a la pintura, en artes visuales. Hay una estadística que dice que hoy día las personas cuando van a un museo tardan no sé cuantos segundos en ver un cuadro. Y que precisamente el ingreso del video, por ejemplo, como artes visuales, te exige tener una concentración por más tiempo, o sea destinas más tiempo en ver un video que en ver un cuadro, cuando muchas veces un cuadro lo tardas mucho más en hacer que un video.</p>
+        <p>El libro te exige un tiempo distinto. Y el tiempo pensado también como lo que te tardas en desentrañar lo que hay adentro. Igual se puede ir más lejos, como al audiolibro, que es como que estás haciendo muchas cosas al mismo tiempo, es como un live. Puedes estar cocinando escuchando En busca del tiempo perdido de Proust en audiolibro. pero si vas con un libro a una discoteca, quizás no es el mejor lugar para leerlo, puede que haya gente a la que le funciones, yo no tengo problemas, me da lo mismo. Puede estar la cagada alrededor y podría estar leyendo, pero no soy tan especial, y creo que la gente es muy diversa. Pero creo que ahí hay un buen problema, esto de cómo el tiempo se suspende en la experiencia con el libro, como quiebra tu experiencia cotidiana.</p>
+        <p class="pregunta">En ese sentido ¿tiene sustitutos? ¿hay otros objetos que produzcan lo mismo?</p>
+        <p>Puede que tenga que ver con lo performativo. Hay como un agotamiento de los formatos, porque como que pasamos al mercado de la experiencia. La representación no es algo que se busque. Ya no compras un disco, ahora vas al festival de música. Esta idea de lo perceptivo, el fetichismo cultural de la copia única. Cada experiencia sensorial en vivo va a ser distinta a cualquier otra, por muchos motivos: por el lugar, el tiempo, el día, los estados de ánimo, una serie muy larga de condiciones. En cambio los discos, los libros, todo eso, son situaciones más estables, que por lo tanto tienen un agotamiento, la mayor parte de la gente no relee los libros. Yo no soy fetichista de los libros, que sean fotocopias, o no me ha preocupado que me los firmen, o tener copias antiguas. Pero entiendo también que como es un objeto que se agota, el fetiche va por la experiencia, cuantas entradas tiene. La gente hoy día acumula entradas, las pega, para declarar que se fue a tal concierto.</p>
+        <p class="pregunta">Siento que acá cómo que se genera una relación media represiva con el libro, desde que uno es chico. El libro siempre como motivo de urgimiento, la prueba, siempre metido en esos espacios. En otros lados se da como una relación más cotidiana con el libro, en los barrios, en las bibliotecas, librerías de barrio, centros culturales, ateneos, gente leyendo en el transporte público, en una plaza, no sé…</p>
+        <p>Yo creo que ahí pasan dos cosas, y sería un poco más optimista, porque pienso en la dictadura, pienso en mis viejos, por ejemplo. Nunca han leído en su vida, y ellos se formaron en dictadura, nacieron en los sesenta, tuvieron toda su formación adolescente en plena dictadura, y en el sur más encima, en un pueblo perdido en el sur. Ellos nunca pudieron acceder a libros, porque el libro ya era un objeto de valor asociado a muchas cosas. Como que la gente que leía eran personas “educadas”, incluso el diario.</p>
+        <p>Yo tengo un tío, que hasta el día de hoy es analfabeto y que para tener cierto estatus, se iba en el tren leyendo el diario, pero todos lo molestaban diciéndole que tenía el diario al revés, porque solamente lo ponía para demostrar que él podía leer, y como no sabía que estaba al revés, le hacían esa broma. Entonces, yo pienso que han habido momentos más duros respecto a la lectura en general, y que hoy día el mismo hecho de la sobretecnologización, o el hecho de que todos tengamos que tener WhatsApp, que todos tengamos que tener algún tipo de alfabetización, hace que la lectura y la escritura, más que la literatura, transiten y se expandan hacia otros medios, y esos otros medios nos dan una base distinta para poder tener una relación distinta con los libros. Pienso en los podcasts, el mismo hecho de la conversación. Si yo esas conversaciones las transcribiera a un libro podría ser perfectamente un libro realista, o costumbrista. Seguiría siendo un libro. Anita Alvarado, cuando publicó una autobiografía, o la Kenita Larraín, fueron textos sumamente comprados, best sellers. El libro soporta muchas cosas, no solo la literatura, y está super bien, no pasa nada. También soporta entretención, la gente necesita entretenerse, no solamente lee para ser culto o para conocer, la gente también lee para perder el tiempo y eso lo encuentro super lícito. </p>
+        <p class="pregunta">¿Cómo ves la relación de todo esto con el ocio? Durante mucho tiempo estuvo imbricado con el libro, hoy día no. Hoy día el ocio tiene más que ver con Netflix, YouTube, redes sociales y todo eso ¿quizás estamos modificando nuestra forma de leer, tal vez ya estamos leyendo más de manera audiovisual que textualmente? También siento que hoy este tipo de cosas hacen que en el ocio se introduzca de manera muy fragmentada la manera en que nos relacionamos con nuestros sentires, con quienes tenemos afecto. Uno no habla con quienes a uno le cae mal por WhatsApp…</p>
+        <p>Hay varias cosas interesantes. Siento que para ciertas clases sociales leer es un estatus, tener ciertas lecturas es un estatus, leer a ciertos autores por sobre otros te da un estatus distinto. Pero por otro lado siempre estamos profitando de alguien que trabaja para la empresa privada, aunque pidas plata en la calle. Estamos ocupando el tiempo de otro, aunque no sea el tuyo, pero estás ocupando el tiempo de otro que está siendo productivo y que dentro de esa producción cabes tú, porque además tú estás siendo el destinatario de ese tiempo productivo.</p>
+        <p>El ocio en estricto rigor no debería tener objetivo, ninguno. Es como perder el tiempo por perder el tiempo. No se que tanto exista el ocio hoy día, porque siempre estamos consumiendo, siempre somos sujetos consumidores. Netflix por ejemplo es como el paradigma del consumo hoy día, porque estás consumiendo un montón de cosas que te están metiendo, como cuando le das una pastilla a un perro para que se la coma: la pones dentro de un pedazo de carne y se la come igual.</p>
+        <p>Como decía Carlos Ossa, el hipervínculo es el nuevo botón rojo de la guerra fría. Como que somos espectadores, somos consumidores a tiempo completo. Lo drástico de la situación es cómo ese ocio desaparece porque siempre está en función de algo. Lo que originalmente era la promesa de la libertad finalmente terminó siendo la jaula, el algoritmo es la jaula.</p>
+        <p class="pregunta">Y este efecto instituyente que tiene el libro ¿el espacio digital también lo hace con una novela, o un poemario?</p>
+        <p>Yo creo que sí, porque finalmente tienes un usuario que se encuentra detrás del sistema productivo. Igual tienes que ir a una página, o a un perfil. En ese sentido siento que lo autoral no desaparece. Lo autoral en ese sentido es un poco más complejo. Me encantaría ser entusiasta y pensar que, por ejemplo, lo que pasó con el Museo a cielo abierto después del estallido en Santiago, o en Temuko, donde veías una vorágine, un palimpsesto de un montón de situaciones que no tienen, entre comillas, autor, porque un stencil lo podía hacer cualquier persona, se podía replicar, como que se lograba la disolución del autor. Pero creo que lo que se logra en términos estrictamente literarios o artísticos no es tan interesante.</p>
+        <p>Me encanta que se diluya la idea de obra personal, creo que ese debería ser el presente, porque al final la única forma de combatir el capitalismo es la comunidad. Comunidades más locales, más pequeñas, comunicarnos, dialogar, que haya un flujo, libre, sin que hayan sensores. Pero por otra parte siento que muchas veces eso está lleno de un poco de ¿infantilismo? Siento que a veces hay mucho buenismo, mucho progresismo en ciertos contenidos.</p>
+      </div>
+    </div>
+
+<div class="grid-x align-middle">
+
+
+      <div class="small-12 medium-5 cell">
+        <img style="border-radius: 0 150px 0 0;mix-blend-mode:multiply;" src="img/serigrafia_5.jpg" alt="">
+      </div>
+      <div class="small-10 small-offset-1 medium-5 medium-offset-1 cell">
+        <p>Imagino un libro hecho por la naturaleza, propio de la naturaleza, que l_s human_s descubrieramos en ella desplegándose ante nosotr_s. <b>Un libro como un fruto orgánico</b> ¿podría existir?</p>
+      </div>
+
+
+</div>
+<hr/>
+
+<div class="grid-container container-footer">
+  <div class="grid-x">
+    <div class="small-10 small-offset-1 medium-5 medium-offset-0 cell">
+      <h6>Grafo / Deriva del Libro<sup>0</sup></h6>
+      <p class="small">Los libros son a la memoria,<br/>
+      lo que la música es al sonido.</p>
+      <p class="small">Diálogos y reflexiones en torno a la naturaleza &#8596; tecnología del libro. </p>
+    </div>
+    <div class="small-6 small-offset-3 medium-5 medium-offset-2 cell">
+      <img id="logo-fondart" src="img/fondart-white.png" alt="">
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="https://res.cloudinary.com/nicolasvenegas/raw/upload/v1676752122/grafo/js/trmix.min_rprt2p.js"></script>
+    <script src="https://res.cloudinary.com/nicolasvenegas/raw/upload/v1676752407/grafo/js/flowtype_wijagn.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js "></script>
+    <script src="https://res.cloudinary.com/nicolasvenegas/raw/upload/v1676752122/grafo/js/trmix.min_rprt2p.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <script>
+    [...document.querySelectorAll("[data-fit-text]")].forEach(el => {
+      // We just need the length of the string as a CSS variable...
+      el.style.setProperty("--length", el.innerText.length);
+    });
+
+</script>
+<script src="js/app.js"></script>
+
+
+
+  </body>
+</html>

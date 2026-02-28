@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch_grafoderivas.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+
+  <!-- This line removes any default padding and style.
+       You might only need one of these values set. -->
+
+</head>
+
+<body>
+
+<div id="creditos">Deriva del Libro @ 2022</div>
+
+<div class="customCursor"></div>
+
+<div class="container">
+  <div class="interior">
+    <h1><a id="btn-inicio" href="#open-modal"><span>       <small><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path d="M15 7h2a5 5 0 1 1 0 10h-2"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></small>
+</span>
+    </a> </h1>
+    <!-- <div id="bar">
+    	<p id="news"><b>¿los libros no harán más revoluciones?</b></p>
+    </div> -->
+  </div>
+
+</div>
+<div id="open-modal" class="modal-window pattern-dots-sm blue">
+  <div>
+    <a href="#" title="cerrar" class="modal-close">← portada</a>
+    <h2>grafo / deriva del libro<sup>0</sup></h2>
+    <h6 class="text-right">modelo para representar relaciones entre elementos de un conjunto.<br/>una caminata sin objetivo específico.</h6>
+    <div>
+	    <p class="lowercase">¿Qué es un libro?
+¿Qué características debe tener un objeto para que lo llamemos así?
+¿Cuál es el límite tras el cual un objeto ya no puede ser llamado libro?
+¿Qué libros todavía no hemos pensamos? En un estudio sobre la hibridación humana y máquinas no intrusivas con 300 taxistas usando GPS en París, el filósofo Miguel Benasayag llegó a la conclusión al cabo de 3 años de investigación que tod_s l_s choferes tenían los núcleos subcorticales del cerebro, encargados de cartografiar el tiempo y el espacio, atrofiados. Un fenómeno de colonización: el área se atrofia porque la función se delega sin ser reemplazada por ninguna otra. ¿Hay atrofia en nuestra capacidad de imaginar, registrar y recordar?
+¿Es la acontecida con el libro u relación humano/objeto que estamos “olvidando”, “perdiendo”?
+Cuando el humano delega capacidades a las máquinas ¿también lo hereda los objetos? ¿qué ha perdido el libro? ¿qué cosa ya no es?¿Qué es hacer un libro? Las máquinas hacen libros ¿faltaría algo en un libro hecho sin intervención humana? ¿Cómo deberían ser los libros escolares? Pudiéramos pensar el libro como un mensaje en el tiempo, una dislocación en la relación habitual entre nosotr_s y los objetos que nos rodean ¿Qué sensaciones nos produce relacionarnos con libros? ¿existe algún sustituto que nos haga sentir de la misma manera? Si vemos el libro como nodo de una geometría irregular de referencias que vamos tejiendo l_s human_s que nos relacionamos con libros.
+¿Qué (nos) hace un libro?
+¿Todo libro debe tener un “objetivo”?
+¿Qué cosas nos quedan por hacer con libros? 3 libros extraños, libres, bonitos, lejanos, descentrados, subterráneos.</p>
+<br/><br/>
+
+<ul id="menu-autorxs">
+  <li><a href="entrevistas/maritza.html">Maritza Diéguez</a></li>
+  <li><a href="entrevistas/pato.html">Patricio Alvarado</a></li>
+  <li><a href="entrevistas/volpi.html">Jorge Volpi</a></li>
+  <li><a href="entrevistas/karen.html">Karen Wyss Paillalef</a></li>
+  <li><a href="entrevistas/patogu.html">Patricio Gutierrez</a></li>
+  <li><a href="entrevistas/paz.html">María Compás</a></li>
+  <li><a href="entrevistas/francke.html">Cristian Francke</a></li>
+  <li><a href="entrevistas/pablo.html">Pablo Ayenao</a></li>
+</ul>
+
+<img id="fondart" src="assets/fondart-1.jpg">
+
+<!--
+	    <p>hay libros que definen el campo<br/>
+las fronteras de lo correcto<br/>
+consistentes<br/>
+otros que fracturan<br/>
+afectan<br/>
+queman el tiempo.<br/>
+Un objeto que cambia de estatuto<br/>
+
+	    </p>
+-->
+
+    </div>
+    <br>
+
+
+  </div>
+</div>
+</div>
+<script>
+	// collect all the divs
+var divs = document.getElementsByTagName('span');
+// get window width and height
+var winWidth = window.innerWidth;
+var winHeight = window.innerHeight;
+
+// i stands for "index". you could also call this banana or haircut. it's a variable
+for ( var i=0; i < divs.length; i++ ) {
+
+    // shortcut! the current div in the list
+    var thisDiv = divs[i];
+
+    // get random numbers for each element
+    randomTop = getRandomNumber(0, winHeight);
+    randomLeft = getRandomNumber(0, winWidth);
+
+    // update top and left position
+    thisDiv.style.top = randomTop +"px";
+    thisDiv.style.left = randomLeft +"px";
+
+}
+
+// function that returns a random number between a min and max
+function getRandomNumber(min, max) {
+
+  return Math.random() * (max - min) + min;
+
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+	const circle = document.querySelector(".customCursor");
+let mouseX = 0;
+let mouseY = 0;
+let cursorX = 0;
+let cursorY = 0;
+const lerpSpeed = 0.2;
+function updateCursor() {
+  cursorX = lerp(cursorX, mouseX, lerpSpeed);
+  cursorY = lerp(cursorY, mouseY, lerpSpeed);
+  circle.style.top = cursorY + "px";
+  circle.style.left = cursorX + "px";
+  requestAnimationFrame(updateCursor);
+}
+function lerp(min, max, value) {
+  return (min - max) * value + max;
+}
+document.addEventListener("mousemove", function (event) {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+});
+updateCursor();
+</script>
+
+
+</body>
+</html>
